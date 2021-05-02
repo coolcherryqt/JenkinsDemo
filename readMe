@@ -1,2 +1,22 @@
-This is a new file
-Created for Jenkins-Demo
+pipeline {
+    agent any
+
+    stages {
+        stage('FirstStep') {
+            steps {
+                echo 'Hello Step01'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+            }
+        }
+    }
+}
+
